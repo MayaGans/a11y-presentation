@@ -116,6 +116,55 @@ a.a-list-3 {
     top: 520px;
 }
 
+.item-1 {
+    position: absolute;
+    top: 230px;
+    left: 560px;
+    width: 200px;
+    text-align: center;
+}
+
+.item-2 {
+    position: absolute;
+    top: 230px;
+    left: 560px;
+    width: 200px;
+    text-align: center;
+}
+
+.item-3 {
+    position: absolute;
+    top: 450px;
+    left: 560px;
+    width: 200px;
+    text-align: center;
+}
+
+.slide-header {
+    position: absolute;
+    left: 60px;
+    top: 275px;
+    width: 340px;
+}
+
+.item-2 {
+    position: absolute;
+    top: 230px;
+    left: 840px;
+    width: 200px;
+    text-align: center;
+}
+
+
+
+.item-4 {
+    position: absolute;
+    top: 415px;
+    left: 840px;
+    width: 200px;
+    text-align: center;
+}
+
 .flex-output {
   display: flex;
   gap: 10px;

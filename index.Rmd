@@ -177,6 +177,15 @@ background-size: contain
   4. Don't overwhelm the user with information
 </div>
 
+<div class="slide-header">The goal of a data science team is to help organizations or individuals make better decisions informed by data 
+-Sean Lopp</div>
+
+<div class="item-1">Decide what users need</div>
+<div class="item-2">Lead with key data</div>
+<div class="item-3">Hand power to the user</div>
+<div class="item-4">Use consistent language and colors</div>
+
+
 ---
 
 class: hide-count
