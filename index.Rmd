@@ -89,7 +89,7 @@ ggplot(data, aes(x = person, y = values)) +
 ```
 ]
 
-<img class="img-234" src="assets/color.png"/>
+<img class="img-234" src="assets/color.png" alt="example stacked bar plot with values in different colors, making it hard to distinguish between categories"/>
 
 ---
 
@@ -105,7 +105,7 @@ background-size: contain
 <a class="large-link" href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis —
 Color Blindness Simulator</a>
 
-<img class="img-234" style="width:30%;" src="assets/coblis.png"/>
+<img class="img-234" style="width:30%;" src="assets/coblis.png" alt="screenshots of the previous stacked plot simulating various types of color blindness"/>
 
 ---
 
@@ -130,7 +130,7 @@ ggplot(data, aes(x = person, y = values)) +
 ```
 ]
 
-<img class="img-234" src="assets/pattern.png" style="top:140px;left:660px;"/>
+<img class="img-234" src="assets/pattern.png" style="top:140px;left:660px;" alt="the same stacked bar plot, but rather than using colors to differentiate groups, one category is hashed lines, the other diagonal lines, and the last category repeating plus signs"/>
 
 ---
 
@@ -189,21 +189,58 @@ background-size: contain
 <a class="a-slide-title" href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines</a>
 
 <a class="a-list-1" href="https://color.a11y.com/">Color Contrast Validator</a>
-
 <a class="a-list-2" href="https://developers.google.com/web/tools/lighthouse">Google Lighthouse</a>
-
 <a class="a-list-3" href="https://www.a11yproject.com/checklist/">A11y Project Checklist</a>
 
 ---
 
 class: hide-count
 background-color: white
-background-image: url('assets/slide9.jpeg')
+background-image: url('assets/slide234.jpeg')
 background-size: contain
 
 <div class="title-234">
   6. Use patterns and shapes in addition to color
 </div>
+
+.custom-code-css[
+```{r, eval=FALSE}
+ggplot(data, aes(x = values, y = values2)) +
+  geom_point(stat = "identity", 
+             aes(
+               color = category
+               )
+             ) 
+```
+]
+
+<img class="img-234" src="assets/points_color.png" style="width:30%;top: 200px;" alt="an example dot plot with random values plotted on both the x and y axis, colored by one of three possible categories."/>
+
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide234.jpeg')
+background-size: contain
+
+<div class="title-234">
+  6. Use patterns and shapes in addition to color
+</div>
+
+.custom-code-css[
+```{r, eval=FALSE}
+ggplot(data, aes(x = values, y = values2)) +
+  geom_point(stat = "identity", 
+             aes(
+               color = category, 
+               shape = category
+               )
+             ) 
+```
+]
+
+<img class="img-234" src="assets/point_shape.png" style="width:30%;top:200px;" alt="the same dot plot as the slide before, but rather than denote group only by color, the groups are also distinguished by shape."/>
 
 ---
 

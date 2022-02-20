@@ -1,9 +1,0 @@
-"0","ggplot(data, aes(x = person, y = values)) +
-  geom_bar(stat = ""identity"", aes(fill = category)) +
-  coord_flip() +
-  theme_bw() +
-  xlab("""")
-"
-"2","Error in ggplot(data, aes(x = person, y = values)) : 
-  could not find function ""ggplot""
-"

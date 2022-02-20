@@ -8,7 +8,7 @@
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/colorchecker/css/styles.css" rel="stylesheet" />
     <script src="libs/colorchecker/js/script.js"></script>
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
     <link rel="stylesheet" href="css/color_overrides.css" type="text/css" />
   </head>
@@ -235,12 +235,53 @@ background-size: contain
 
 class: hide-count
 background-color: white
-background-image: url('assets/slide9.jpeg')
+background-image: url('assets/slide234.jpeg')
 background-size: contain
 
 &lt;div class="title-234"&gt;
   6. Use patterns and shapes in addition to color
 &lt;/div&gt;
+
+.custom-code-css[
+
+```r
+ggplot(data, aes(x = values, y = values2)) +
+  geom_point(stat = "identity", 
+             aes(
+               color = category
+               )
+             ) 
+```
+]
+
+&lt;img class="img-234" src="assets/points_color.png" style="width:30%;top: 200px;"/&gt;
+
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide234.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  6. Use patterns and shapes in addition to color
+&lt;/div&gt;
+
+.custom-code-css[
+
+```r
+ggplot(data, aes(x = values, y = values2)) +
+  geom_point(stat = "identity", 
+             aes(
+               color = category, 
+               shape = category
+               )
+             ) 
+```
+]
+
+&lt;img class="img-234" src="assets/point_shape.png" style="width:30%;top:200px;"/&gt;
 
 ---
 
@@ -292,8 +333,6 @@ class: hide-count
 background-color: white
 background-image: url('assets/thankyou.jpeg')
 background-size: contain
-
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
