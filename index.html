@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Xaringan Demo</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Maya Gans" />
+    <meta name="date" content="2022-02-19" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/colorchecker/css/styles.css" rel="stylesheet" />
+    <script src="libs/colorchecker/js/script.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/color_overrides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: right middle hide-count
+background-color: white
+background-image: url('assets/cover.jpg')
+background-size: cover
+
+&lt;div class='title'&gt;&lt;h1&gt;&lt;a class="title-link" href="https://fossheim.io/writing/posts/accessible-dataviz-design/"&gt;Sarah L. Fossheim's 10 dos and don'ts to keep in mind when designing accessible data visualizations&lt;/a&gt;&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div class="author"&gt;MAYA GANS&lt;/div&gt;
+&lt;div class="presentation"&gt;RStudio Meetup&lt;/div&gt;
+
+---
+
+class: right middle hide-count
+background-color: white
+background-image: url('assets/slide1.jpeg')
+background-size: cover
+
+&lt;div class="quote"&gt;Accessibility should always be a focus when designing products, and the same goes when working with data visualizations and graphs.&lt;/div&gt;
+
+&lt;div class="quote-auth"&gt;- Sarah L Fossheim&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide234.jpeg')
+background-size: contain
+
+
+&lt;div class="title-234"&gt;
+  1. Don't rely on color to explain the data
+&lt;/div&gt;
+
+
+
+.custom-code-css[
+
+```r
+ggplot(data, aes(x = person, y = values)) +
+  geom_bar(stat = "identity", aes(fill = category)) 
+```
+]
+
+&lt;img class="img-234" src="assets/color.png"/&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide234.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  1. Don't rely on color to explain the data
+&lt;/div&gt;
+
+&lt;a class="large-link" href="https://www.color-blindness.com/coblis-color-blindness-simulator/"&gt;Coblis —
+Color Blindness Simulator&lt;/a&gt;
+
+&lt;img class="img-234" style="width:30%;" src="assets/coblis.png"/&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide234.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  1. Don't rely on color to explain the data
+&lt;/div&gt;
+
+.custom-code-css[
+
+```r
+library(ggpattern)
+ggplot(data, aes(x = person, y = values)) +
+  geom_col_pattern(
+    aes(pattern = category),
+    fill = 'white',
+    colour = 'black',
+  )
+```
+]
+
+&lt;img class="img-234" src="assets/pattern.png" style="top:140px;left:660px;"/&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide5.jpeg')
+background-size: contain
+
+&lt;div class="title-234 white"&gt;
+  2. Don't use very bright or low-contrast colors
+&lt;/div&gt;
+
+.custom-code-2[
+
+```r
+colorchecker::contrast_checker()
+```
+]
+
+<section id="color-contrast">
+<h1 class="h1-color">Color Contrast Checker</h1>
+<div id="boxes">
+<div id="aa-large">
+<span>Large Text</span>
+<span>WCAG AA</span>
+</div>
+<div id="aa-normal">
+<span>Normal Text</span>
+<span>WCAG AA</span>
+</div>
+<div id="aaa-large">
+<span>Large Text</span>
+<span>WCAG AAA</span>
+</div>
+<div id="aaa-normal">
+<span>Large Text</span>
+<span>WCAG AAA</span>
+</div>
+</div>
+<div id="sample">
+<div contenteditable="TRUE" id="sample-text" style="color:rgb(0,0,0);background:rgb(255,255,255)">Click to change the demo text</div>
+</div>
+<div id="bars">
+<div class="color-picker">
+<h2 class="h2-color">Foreground</h2>
+<div>
+<label for="color-1-r" class="red">R</label>
+<input id="color-1-r" type="range" min="0" max="225" value="0"/>
+<input id="number-1-r" type="number" min="0" max="225" value="0"/>
+</div>
+<div>
+<label for="color-1-g" class="green">G</label>
+<input id="color-1-g" type="range" min="0" max="225" value="0"/>
+<input id="number-1-g" type="number" min="0" max="225" value="0"/>
+</div>
+<div>
+<label for="color-1-b" class="blue">B</label>
+<input id="color-1-b" type="range" min="0" max="225" value="0"/>
+<input id="number-1-b" type="number" min="0" max="225" value="0"/>
+</div>
+<input id="color-1-hex" data-target="1" type="text" value="#000000" maxlength="7"/>
+</div>
+<div class="color-picker">
+<h2 class="h2-color">Background</h2>
+<div>
+<label for="color-2-r" class="red">R</label>
+<input id="color-2-r" type="range" min="0" max="225" value="0"/>
+<input id="number-2-r" type="number" min="0" max="225" value="0"/>
+</div>
+<div>
+<label for="color-2-g" class="green">G</label>
+<input id="color-2-g" type="range" min="0" max="225" value="0"/>
+<input id="number-2-g" type="number" min="0" max="225" value="0"/>
+</div>
+<div>
+<label for="color-2-b" class="blue">B</label>
+<input id="color-2-b" type="range" min="0" max="225" value="0"/>
+<input id="number-2-b" type="number" min="0" max="225" value="0"/>
+</div>
+<input id="color-2-hex" data-target="1" type="text" value="#000000" maxlength="7"/>
+</div>
+</div>
+</section>
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide6.jpeg')
+background-size: contain
+
+&lt;div class="title-234 white"&gt;
+  3. Don't hide important data behind interactions
+&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide7.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  4. Don't overwhelm the user with information
+&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide8.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  5. Use accessibility tools when designing
+&lt;/div&gt;
+
+&lt;a class="a-slide-title" href="https://www.w3.org/TR/WCAG21/"&gt;Web Content Accessibility Guidelines&lt;/a&gt;
+
+&lt;a class="a-list-1" href="https://color.a11y.com/"&gt;Color Contrast Validator&lt;/a&gt;
+
+&lt;a class="a-list-2" href="https://developers.google.com/web/tools/lighthouse"&gt;Google Lighthouse&lt;/a&gt;
+
+&lt;a class="a-list-3" href="https://www.a11yproject.com/checklist/"&gt;A11y Project Checklist&lt;/a&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide9.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  6. Use patterns and shapes in addition to color
+&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide10.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  7. Use labels and legends
+&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide11.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  8. Translate the data into clear language
+&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide12.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  9. Provide context and explain the visualization
+&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide13.jpeg')
+background-size: contain
+
+&lt;div class="title-234"&gt;
+  10. Focus on accessibility during user interviews
+&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/thankyou.jpeg')
+background-size: contain
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
