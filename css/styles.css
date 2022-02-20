@@ -1,10 +1,14 @@
 /* title slide */
 
 .title h1 {
-    font-size: 1.9rem;
-    max-width: 800px;
-    text-align: left;
-    margin-top: 200px;
+  text-align: left;
+}
+
+.subtitle {
+  text-align: left;
+  top: 370px;
+  position: absolute;
+  width: 600px;
 }
 
 .author {
@@ -77,9 +81,11 @@ pre {
 .a-slide-title {
     text-decoration: underline;
     position: absolute;
+    margin-left: 20px;
     width: 300px;
-    top: 300px;
+    top: 275px;
     text-align: center;
+    font-size: 40px;
 }
 
 .a-list-1 {

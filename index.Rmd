@@ -39,7 +39,9 @@ background-color: white
 background-image: url('assets/cover.jpg')
 background-size: cover
 
-<div class='title'><h1><a class="title-link" href="https://fossheim.io/writing/posts/accessible-dataviz-design/">Sarah L. Fossheim's 10 dos and don'ts to keep in mind when designing accessible data visualizations</a></h1></div>
+<div class='title'><h1>A11Y IN R:</h1></div>
+<div class='subtitle'>
+Adapting <a class="title-link" href="https://fossheim.io/writing/posts/accessible-dataviz-design/">Sarah L. Fossheim's 10 dos and don'ts to keep in mind when designing accessible data visualizations</a></div>
 
 <div class="author">MAYA GANS</div>
 <div class="presentation">RStudio Meetup</div>

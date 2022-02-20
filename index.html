@@ -25,7 +25,9 @@ background-color: white
 background-image: url('assets/cover.jpg')
 background-size: cover
 
-&lt;div class='title'&gt;&lt;h1&gt;&lt;a class="title-link" href="https://fossheim.io/writing/posts/accessible-dataviz-design/"&gt;Sarah L. Fossheim's 10 dos and don'ts to keep in mind when designing accessible data visualizations&lt;/a&gt;&lt;/h1&gt;&lt;/div&gt;
+&lt;div class='title'&gt;&lt;h1&gt;A11Y IN R:&lt;/h1&gt;&lt;/div&gt;
+&lt;div class='subtitle'&gt;
+Adapting &lt;a class="title-link" href="https://fossheim.io/writing/posts/accessible-dataviz-design/"&gt;Sarah L. Fossheim's 10 dos and don'ts to keep in mind when designing accessible data visualizations&lt;/a&gt;&lt;/div&gt;
 
 &lt;div class="author"&gt;MAYA GANS&lt;/div&gt;
 &lt;div class="presentation"&gt;RStudio Meetup&lt;/div&gt;
@@ -63,7 +65,7 @@ ggplot(data, aes(x = person, y = values)) +
 ```
 ]
 
-&lt;img class="img-234" src="assets/color.png"/&gt;
+&lt;img class="img-234" src="assets/color.png" alt="example stacked bar plot with values in different colors, making it hard to distinguish between categories"/&gt;
 
 ---
 
@@ -79,7 +81,7 @@ background-size: contain
 &lt;a class="large-link" href="https://www.color-blindness.com/coblis-color-blindness-simulator/"&gt;Coblis —
 Color Blindness Simulator&lt;/a&gt;
 
-&lt;img class="img-234" style="width:30%;" src="assets/coblis.png"/&gt;
+&lt;img class="img-234" style="width:30%;" src="assets/coblis.png" alt="screenshots of the previous stacked plot simulating various types of color blindness"/&gt;
 
 ---
 
@@ -105,7 +107,7 @@ ggplot(data, aes(x = person, y = values)) +
 ```
 ]
 
-&lt;img class="img-234" src="assets/pattern.png" style="top:140px;left:660px;"/&gt;
+&lt;img class="img-234" src="assets/pattern.png" style="top:140px;left:660px;" alt="the same stacked bar plot, but rather than using colors to differentiate groups, one category is hashed lines, the other diagonal lines, and the last category repeating plus signs"/&gt;
 
 ---
 
@@ -226,9 +228,7 @@ background-size: contain
 &lt;a class="a-slide-title" href="https://www.w3.org/TR/WCAG21/"&gt;Web Content Accessibility Guidelines&lt;/a&gt;
 
 &lt;a class="a-list-1" href="https://color.a11y.com/"&gt;Color Contrast Validator&lt;/a&gt;
-
 &lt;a class="a-list-2" href="https://developers.google.com/web/tools/lighthouse"&gt;Google Lighthouse&lt;/a&gt;
-
 &lt;a class="a-list-3" href="https://www.a11yproject.com/checklist/"&gt;A11y Project Checklist&lt;/a&gt;
 
 ---
@@ -254,7 +254,7 @@ ggplot(data, aes(x = values, y = values2)) +
 ```
 ]
 
-&lt;img class="img-234" src="assets/points_color.png" style="width:30%;top: 200px;"/&gt;
+&lt;img class="img-234" src="assets/points_color.png" style="width:30%;top: 200px;" alt="an example dot plot with random values plotted on both the x and y axis, colored by one of three possible categories."/&gt;
 
 
 ---
@@ -281,7 +281,7 @@ ggplot(data, aes(x = values, y = values2)) +
 ```
 ]
 
-&lt;img class="img-234" src="assets/point_shape.png" style="width:30%;top:200px;"/&gt;
+&lt;img class="img-234" src="assets/point_shape.png" style="width:30%;top:200px;" alt="the same dot plot as the slide before, but rather than denote group only by color, the groups are also distinguished by shape."/&gt;
 
 ---
 
