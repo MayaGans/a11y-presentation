@@ -4,7 +4,7 @@
     <title>Xaringan Demo</title>
     <meta charset="utf-8" />
     <meta name="author" content="Maya Gans" />
-    <meta name="date" content="2022-02-19" />
+    <meta name="date" content="2022-02-21" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/colorchecker/css/styles.css" rel="stylesheet" />
     <script src="libs/colorchecker/js/script.js"></script>
@@ -296,12 +296,37 @@ ggplot(data, aes(x = values, y = values2)) +
 
 class: hide-count
 background-color: white
-background-image: url('assets/slide10.jpeg')
+background-image: url('assets/slide234.jpeg')
 background-size: contain
 
 &lt;div class="title-234"&gt;
   7. Use labels and legends
 &lt;/div&gt;
+
+.custom-code-css-grob[
+
+```r
+p &lt;- ggplot(data, aes(x = time, y = values, group = person)) +
+  geom_point(aes(shape = person, color = person)) +
+  geom_line(aes(color = person, linetype = person)) +
+  geom_text(data = subset(data, time == 3), 
+            aes(label = person, 
+                colour = person, 
+                x = max(data$time) + 0.1, 
+                y = values
+            ), 
+            hjust = -0.4) +
+  theme(plot.margin = unit(c(1,6,1,1), "lines")) 
+
+gt &lt;- ggplotGrob(p)
+gt$layout$clip[gt$layout$name == "panel"] &lt;- "off"
+grid.draw(gt)
+```
+]
+
+&lt;img class="img-234" src="assets/line_labels.png" style="width:30%;top:200px;" alt="A line plot of three peoples values over time where instead of using a legend box, the person identifier is aligned with the last value of the line on the y-axis."/&gt;
+
+
 
 ---
 

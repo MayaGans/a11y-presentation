@@ -155,7 +155,9 @@ a.a-list-3 {
     text-align: center;
 }
 
-
+span.hljs-number {
+    display: inline;
+}
 
 .item-4 {
     position: absolute;
@@ -163,6 +165,13 @@ a.a-list-3 {
     left: 840px;
     width: 200px;
     text-align: center;
+}
+
+.custom-code-css-grob {
+position: absolute;
+    top: 120px;
+    left: 50px;
+    font-size: 20px;
 }
 
 .flex-output {
