@@ -324,9 +324,58 @@ background-color: white
 background-image: url('assets/slide13.jpeg')
 background-size: contain
 
-<div class="title-234">
+<div class="title-234 white">
   10. Focus on accessibility during user interviews
 </div>
+
+.box-13[
+## Preparing
+- Give user personas disabilities
+]
+
+<img class='img-13' src="assets/interview1.jpeg" alt="crowd of people"/>
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide13.jpeg')
+background-size: contain
+
+<div class="title-234 white">
+  10. Focus on accessibility during user interviews
+</div>
+
+.box-13[
+ <h2>Recruiting</h2>
+ - Set aside 1 on 1 time 
+ - Give participants a ride share credit
+ - Inquire about the assistive technology used
+]
+
+<img class='img-13' src="assets/interview2.jpeg" alt="zoom in of an interview with a hand taking notes in a notebook"/>
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide13.jpeg')
+background-size: contain
+
+<div class="title-234 white ">
+  10. Focus on accessibility during user interviews
+</div>
+
+.box-13[
+## Conducting
+- Bring their own hardware 
+- Assistive Tech specialist on sight 
+- Assume interviews will be longer
+- Have a working prototype 
+]
+
+<img class='img-13' src="assets/interview3.jpeg" alt="zoom in of an interview with a hand taking notes in a notebook"/>
+
 
 ---
 
