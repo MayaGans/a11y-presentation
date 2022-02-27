@@ -179,7 +179,7 @@ background-size: contain
 </div>
 
 <div class="slide-header">The goal of a data science team is to help organizations or individuals make better decisions informed by data 
--Sean Lopp</div>
+<br><span style="text-align:right;">-Sean Lopp</span></div>
 
 <div class="item-1">Decide what users need</div>
 <div class="item-2">Lead with key data</div>
@@ -296,9 +296,15 @@ background-color: white
 background-image: url('assets/slide11.jpeg')
 background-size: contain
 
-<div class="title-234">
+<div class="title-11">
   8. Translate the data into clear language
 </div>
+
+<div class="white-background"></div>
+
+<iframe style="top: 140px;left: 250px;width: 650px;height: 400px;position: absolute;" src="https://observablehq.com/embed/@frankelavsky/chartability?cells=chart"></iframe>
+
+<a class="title-link link-11" href="https://chartability.fizz.studio/">Chartability</a>
 
 ---
 

@@ -178,3 +178,25 @@ position: absolute;
   display: flex;
   gap: 10px;
 }
+
+.title-11 {
+    position: absolute;
+    top: 90px;
+    left: 275px;
+    color: white;
+}
+
+.link-11 {
+    position: absolute;
+    top: 30px;
+    left: 200px;
+}
+
+.white-background {
+  top: 140px;
+  left: 250px;
+  width: 650px;
+  height: 400px;
+  position: absolute;
+  background-color: white;
+}
