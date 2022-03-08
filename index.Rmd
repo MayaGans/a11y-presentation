@@ -23,6 +23,8 @@ knitr::opts_chunk$set(highlight = TRUE)
 
 ```{r xaringan-themer, include=FALSE}
 library(xaringanthemer)
+library(plotly)
+library(magrittr)
 library(ggplot2)
 mono_light(
   white_color = "#fff",
@@ -166,6 +168,107 @@ background-size: contain
 <div class="title-234 white">
   3. Don't hide important data behind interactions
 </div>
+
+.plotly-hover[
+```{r, echo=FALSE, warning=FALSE}
+plotly::plot_ly(
+  data, 
+  x = ~person, 
+  y = ~values,
+  type = 'bar', 
+  color = ~category,
+  hovertemplate = paste(
+      '<b> Value:</b>%{y}',
+      '<extra></extra>')
+  ) %>% 
+  plotly::layout(barmode = 'stack',
+                 width = 400, 
+                 height = 200)
+```
+]
+
+.focus-plot[
+```{r, echo=FALSE, warning=FALSE}
+plotly::plot_ly(
+  data, 
+  x = ~person, 
+  y = ~values,
+  type = 'bar', 
+  color = ~category,
+  hoverinfo='none'
+  ) %>% 
+  plotly::layout(barmode = 'stack', 
+                 width = 400, 
+                 height = 200) %>%
+  htmlwidgets::onRender("
+    function(el) { 
+      el.on('plotly_click', function(d) { 
+        console.log('Click: ', d);
+        let output = document.getElementById('plotly-output')
+        output.innerHTML = 
+          `Value: ${d.points[0].value}`
+      });
+    }
+  ")
+```
+]
+
+<div id='plotly-output'></div>
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide6.jpeg')
+background-size: contain
+
+<div class="title-234 white">
+  3. Don't hide important data behind interactions
+</div>
+
+
+.plotly-hover-code[
+```{r, eval=FALSE}
+plotly::plot_ly(
+  data, 
+  x = ~person, 
+  y = ~values,
+  type = 'bar', 
+  color = ~category,
+  hovertemplate = paste(
+      '<b> Value:</b>%{y}',
+      '<extra></extra>')
+  ) %>% 
+  plotly::layout(barmode = 'stack')
+```
+]
+
+.plotly-focus-code[
+```{r, eval=FALSE}
+tags$div(id="plotly-output")
+
+plotly::plot_ly(
+  data, 
+  x = ~person, 
+  y = ~values,
+  type = 'bar', 
+  color = ~category,
+  hoverinfo='none'
+  ) %>% 
+  plotly::layout(barmode = 'stack') %>%
+  htmlwidgets::onRender("
+    function(el) { 
+      el.on('plotly_click', function(d) { 
+        let output = document.getElementById('plotly-output')
+        output.innerHTML = 
+          `Value: ${d.points[0].value}`
+      });
+    }
+  ")
+```
+]
+
+
 
 ---
 

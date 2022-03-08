@@ -4,10 +4,18 @@
     <title>Xaringan Demo</title>
     <meta charset="utf-8" />
     <meta name="author" content="Maya Gans" />
-    <meta name="date" content="2022-02-26" />
+    <meta name="date" content="2022-03-07" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/colorchecker/css/styles.css" rel="stylesheet" />
     <script src="libs/colorchecker/js/script.js"></script>
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/plotly-binding/plotly.js"></script>
+    <script src="libs/typedarray/typedarray.min.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
+    <link href="libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="libs/plotly-main/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
     <link rel="stylesheet" href="css/color_overrides.css" type="text/css" />
@@ -202,6 +210,75 @@ background-size: contain
 &lt;div class="title-234 white"&gt;
   3. Don't hide important data behind interactions
 &lt;/div&gt;
+
+.plotly-hover[
+<div id="htmlwidget-4532648445aa7e3cbadb" style="width:504px;height:504px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4532648445aa7e3cbadb">{"x":{"visdat":{"15d85678ed3d":["function () ","plotlyVisDat"]},"cur_data":"15d85678ed3d","attrs":{"15d85678ed3d":{"x":{},"y":{},"hovertemplate":"<b> Value:<\/b>%{y} <extra><\/extra>","color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"width":400,"height":200,"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"stack","xaxis":{"domain":[0,1],"automargin":true,"title":"person","type":"category","categoryorder":"array","categoryarray":["Person 1","Person 2","Person 3"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"values"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Person 1","Person 2","Person 3"],"y":[2,6,3],"hovertemplate":["<b> Value:<\/b>%{y} <extra><\/extra>","<b> Value:<\/b>%{y} <extra><\/extra>","<b> Value:<\/b>%{y} <extra><\/extra>"],"type":"bar","name":"Category 1","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Person 1","Person 2","Person 3"],"y":[4,6,7],"hovertemplate":["<b> Value:<\/b>%{y} <extra><\/extra>","<b> Value:<\/b>%{y} <extra><\/extra>","<b> Value:<\/b>%{y} <extra><\/extra>"],"type":"bar","name":"Category 2","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Person 1","Person 2","Person 3"],"y":[6,10,4],"hovertemplate":["<b> Value:<\/b>%{y} <extra><\/extra>","<b> Value:<\/b>%{y} <extra><\/extra>","<b> Value:<\/b>%{y} <extra><\/extra>"],"type":"bar","name":"Category 3","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+]
+
+.focus-plot[
+<div id="htmlwidget-cd0842cf93b42e4f8ade" style="width:504px;height:504px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cd0842cf93b42e4f8ade">{"x":{"visdat":{"15d851f6f1b3c":["function () ","plotlyVisDat"]},"cur_data":"15d851f6f1b3c","attrs":{"15d851f6f1b3c":{"x":{},"y":{},"hoverinfo":"none","color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"width":400,"height":200,"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"stack","xaxis":{"domain":[0,1],"automargin":true,"title":"person","type":"category","categoryorder":"array","categoryarray":["Person 1","Person 2","Person 3"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"values"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Person 1","Person 2","Person 3"],"y":[2,6,3],"hoverinfo":["none","none","none"],"type":"bar","name":"Category 1","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Person 1","Person 2","Person 3"],"y":[4,6,7],"hoverinfo":["none","none","none"],"type":"bar","name":"Category 2","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Person 1","Person 2","Person 3"],"y":[6,10,4],"hoverinfo":["none","none","none"],"type":"bar","name":"Category 3","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":{"render":[{"code":"\n    function(el) { \n      el.on('plotly_click', function(d) { \n        console.log('Click: ', d);\n        let output = document.getElementById('plotly-output')\n        output.innerHTML = \n          `Value: ${d.points[0].value}`\n      });\n    }\n  ","data":null}]}}</script>
+]
+
+&lt;div id='plotly-output'&gt;&lt;/div&gt;
+
+---
+
+class: hide-count
+background-color: white
+background-image: url('assets/slide6.jpeg')
+background-size: contain
+
+&lt;div class="title-234 white"&gt;
+  3. Don't hide important data behind interactions
+&lt;/div&gt;
+
+
+.plotly-hover-code[
+
+```r
+plotly::plot_ly(
+  data, 
+  x = ~person, 
+  y = ~values,
+  type = 'bar', 
+  color = ~category,
+  hovertemplate = paste(
+      '&lt;b&gt; Value:&lt;/b&gt;%{y}',
+      '&lt;extra&gt;&lt;/extra&gt;')
+  ) %&gt;% 
+  plotly::layout(barmode = 'stack')
+```
+]
+
+.plotly-focus-code[
+
+```r
+tags$div(id="plotly-output")
+
+plotly::plot_ly(
+  data, 
+  x = ~person, 
+  y = ~values,
+  type = 'bar', 
+  color = ~category,
+  hoverinfo='none'
+  ) %&gt;% 
+  plotly::layout(barmode = 'stack') %&gt;%
+  htmlwidgets::onRender("
+    function(el) { 
+      el.on('plotly_click', function(d) { 
+        let output = document.getElementById('plotly-output')
+        output.innerHTML = 
+          `Value: ${d.points[0].value}`
+      });
+    }
+  ")
+```
+]
+
+
 
 ---
 

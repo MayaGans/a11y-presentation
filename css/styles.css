@@ -230,3 +230,37 @@ position: absolute;
     filter: grayscale(100%);
 }
 
+.focus-plot {
+    position: absolute;
+    top: 270px;
+    right: 75px;
+}
+
+.plotly-hover {
+    position: absolute;
+    top: 270px;
+    left: 105px;
+}
+
+#plotly-output {
+  position: absolute;
+  right: 465px;
+  top: 500px;
+  z-index: 99999999;
+  font-weight: 800;
+}
+
+.plotly-focus-code {
+    position: absolute;
+    top: 260px;
+    left: 625px;
+    font-size: 15px;
+}
+
+.plotly-hover-code {
+    position: absolute;
+    font-size: 20px;
+    top: 275px;
+    left: 150px;
+}
+
